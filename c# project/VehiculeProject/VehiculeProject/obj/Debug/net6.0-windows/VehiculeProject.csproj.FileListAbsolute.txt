@@ -1,0 +1,46 @@
+C:\Users\aziz\source\repos\VehiculeProject\VehiculeProject\bin\Debug\net6.0-windows\VehiculeProject.exe
+C:\Users\aziz\source\repos\VehiculeProject\VehiculeProject\bin\Debug\net6.0-windows\VehiculeProject.deps.json
+C:\Users\aziz\source\repos\VehiculeProject\VehiculeProject\bin\Debug\net6.0-windows\VehiculeProject.runtimeconfig.json
+C:\Users\aziz\source\repos\VehiculeProject\VehiculeProject\bin\Debug\net6.0-windows\VehiculeProject.dll
+C:\Users\aziz\source\repos\VehiculeProject\VehiculeProject\bin\Debug\net6.0-windows\VehiculeProject.pdb
+C:\Users\aziz\source\repos\VehiculeProject\VehiculeProject\bin\Debug\net6.0-windows\System.Data.SQLite.dll
+C:\Users\aziz\source\repos\VehiculeProject\VehiculeProject\obj\Debug\net6.0-windows\VehiculeProject.csproj.AssemblyReference.cache
+C:\Users\aziz\source\repos\VehiculeProject\VehiculeProject\obj\Debug\net6.0-windows\VehiculeProject.Form1.resources
+C:\Users\aziz\source\repos\VehiculeProject\VehiculeProject\obj\Debug\net6.0-windows\VehiculeProject.Form2.resources
+C:\Users\aziz\source\repos\VehiculeProject\VehiculeProject\obj\Debug\net6.0-windows\VehiculeProject.csproj.GenerateResource.cache
+C:\Users\aziz\source\repos\VehiculeProject\VehiculeProject\obj\Debug\net6.0-windows\VehiculeProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aziz\source\repos\VehiculeProject\VehiculeProject\obj\Debug\net6.0-windows\VehiculeProject.AssemblyInfoInputs.cache
+C:\Users\aziz\source\repos\VehiculeProject\VehiculeProject\obj\Debug\net6.0-windows\VehiculeProject.AssemblyInfo.cs
+C:\Users\aziz\source\repos\VehiculeProject\VehiculeProject\obj\Debug\net6.0-windows\VehiculeProject.csproj.CoreCompileInputs.cache
+C:\Users\aziz\source\repos\VehiculeProject\VehiculeProject\obj\Debug\net6.0-windows\VehiculeProject.csproj.CopyComplete
+C:\Users\aziz\source\repos\VehiculeProject\VehiculeProject\obj\Debug\net6.0-windows\VehiculeProject.dll
+C:\Users\aziz\source\repos\VehiculeProject\VehiculeProject\obj\Debug\net6.0-windows\refint\VehiculeProject.dll
+C:\Users\aziz\source\repos\VehiculeProject\VehiculeProject\obj\Debug\net6.0-windows\VehiculeProject.pdb
+C:\Users\aziz\source\repos\VehiculeProject\VehiculeProject\obj\Debug\net6.0-windows\VehiculeProject.genruntimeconfig.cache
+C:\Users\aziz\source\repos\VehiculeProject\VehiculeProject\obj\Debug\net6.0-windows\ref\VehiculeProject.dll
+C:\Users\aziz\source\repos\VehiculeProject\VehiculeProject\bin\Debug\net6.0-windows\msvcr100.dll
+C:\Users\aziz\source\repos\VehiculeProject\VehiculeProject\bin\Debug\net6.0-windows\project.db3
+C:\Users\aziz\source\repos\VehiculeProject\VehiculeProject\bin\Debug\net6.0-windows\SQLite.Interop.dll
+C:\Users\aziz\Downloads\tekup\sem 1 projects\c# project\VehiculeProject\VehiculeProject\obj\Debug\net6.0-windows\VehiculeProject.Form1.resources
+C:\Users\aziz\Downloads\tekup\sem 1 projects\c# project\VehiculeProject\VehiculeProject\obj\Debug\net6.0-windows\VehiculeProject.Form2.resources
+C:\Users\aziz\Downloads\tekup\sem 1 projects\c# project\VehiculeProject\VehiculeProject\obj\Debug\net6.0-windows\VehiculeProject.csproj.GenerateResource.cache
+C:\Users\aziz\Downloads\tekup\sem 1 projects\c# project\VehiculeProject\VehiculeProject\obj\Debug\net6.0-windows\VehiculeProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aziz\Downloads\tekup\sem 1 projects\c# project\VehiculeProject\VehiculeProject\obj\Debug\net6.0-windows\VehiculeProject.AssemblyInfoInputs.cache
+C:\Users\aziz\Downloads\tekup\sem 1 projects\c# project\VehiculeProject\VehiculeProject\obj\Debug\net6.0-windows\VehiculeProject.AssemblyInfo.cs
+C:\Users\aziz\Downloads\tekup\sem 1 projects\c# project\VehiculeProject\VehiculeProject\obj\Debug\net6.0-windows\VehiculeProject.csproj.CoreCompileInputs.cache
+C:\Users\aziz\Downloads\tekup\sem 1 projects\c# project\VehiculeProject\VehiculeProject\obj\Debug\net6.0-windows\VehiculeProject.dll
+C:\Users\aziz\Downloads\tekup\sem 1 projects\c# project\VehiculeProject\VehiculeProject\obj\Debug\net6.0-windows\refint\VehiculeProject.dll
+C:\Users\aziz\Downloads\tekup\sem 1 projects\c# project\VehiculeProject\VehiculeProject\obj\Debug\net6.0-windows\VehiculeProject.pdb
+C:\Users\aziz\Downloads\tekup\sem 1 projects\c# project\VehiculeProject\VehiculeProject\bin\Debug\net6.0-windows\VehiculeProject.exe
+C:\Users\aziz\Downloads\tekup\sem 1 projects\c# project\VehiculeProject\VehiculeProject\bin\Debug\net6.0-windows\project.db3
+C:\Users\aziz\Downloads\tekup\sem 1 projects\c# project\VehiculeProject\VehiculeProject\bin\Debug\net6.0-windows\VehiculeProject.deps.json
+C:\Users\aziz\Downloads\tekup\sem 1 projects\c# project\VehiculeProject\VehiculeProject\bin\Debug\net6.0-windows\VehiculeProject.runtimeconfig.json
+C:\Users\aziz\Downloads\tekup\sem 1 projects\c# project\VehiculeProject\VehiculeProject\bin\Debug\net6.0-windows\VehiculeProject.dll
+C:\Users\aziz\Downloads\tekup\sem 1 projects\c# project\VehiculeProject\VehiculeProject\bin\Debug\net6.0-windows\VehiculeProject.pdb
+C:\Users\aziz\Downloads\tekup\sem 1 projects\c# project\VehiculeProject\VehiculeProject\bin\Debug\net6.0-windows\System.Data.SQLite.dll
+C:\Users\aziz\Downloads\tekup\sem 1 projects\c# project\VehiculeProject\VehiculeProject\obj\Debug\net6.0-windows\VehiculeProject.csproj.AssemblyReference.cache
+C:\Users\aziz\Downloads\tekup\sem 1 projects\c# project\VehiculeProject\VehiculeProject\obj\Debug\net6.0-windows\VehiculeProject.csproj.CopyComplete
+C:\Users\aziz\Downloads\tekup\sem 1 projects\c# project\VehiculeProject\VehiculeProject\obj\Debug\net6.0-windows\VehiculeProject.genruntimeconfig.cache
+C:\Users\aziz\Downloads\tekup\sem 1 projects\c# project\VehiculeProject\VehiculeProject\obj\Debug\net6.0-windows\ref\VehiculeProject.dll
+C:\Users\aziz\Downloads\tekup\sem 1 projects\c# project\VehiculeProject\VehiculeProject\bin\Debug\net6.0-windows\msvcr100.dll
+C:\Users\aziz\Downloads\tekup\sem 1 projects\c# project\VehiculeProject\VehiculeProject\bin\Debug\net6.0-windows\SQLite.Interop.dll

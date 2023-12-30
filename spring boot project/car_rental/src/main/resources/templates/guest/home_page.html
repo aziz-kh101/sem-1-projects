@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+  <head th:replace="~{fragments/guest.html :: pageHead('Car rentel')}"> </head>
+  <body>
+    <header th:replace="~{fragments/guest.html :: pageHeader}"></header>
+    <section class="fill-section home-section">
+      <div class="image-container">
+        <img th:src="@{/images/main.png}" alt="" />
+      </div>
+      <h1>Welcome to our Rental Website</h1>
+      <a class="button-rounded" th:href="@{/list-cars}">list of our cars</a>
+    </section>
+    <header th:replace="~{fragments/guest.html :: pageFooter}"></header>
+  </body>
+</html>

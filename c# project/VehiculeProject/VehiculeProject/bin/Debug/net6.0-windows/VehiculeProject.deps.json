@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "VehiculeProject/1.0.0": {
+        "dependencies": {
+          "System.Data.SQLite": "1.0.110.0"
+        },
+        "runtime": {
+          "VehiculeProject.dll": {}
+        }
+      },
+      "System.Data.SQLite/1.0.110.0": {
+        "runtime": {
+          "System.Data.SQLite.dll": {
+            "assemblyVersion": "1.0.110.0",
+            "fileVersion": "1.0.110.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "VehiculeProject/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "System.Data.SQLite/1.0.110.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

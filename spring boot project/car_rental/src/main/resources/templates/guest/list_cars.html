@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+  <head th:replace="~{fragments/guest.html :: pageHead('car list')}"> </head>
+  <body>
+    <header th:replace="~{fragments/guest.html :: pageHeader}"></header>
+    <section class="list-admin-section fill-section">
+      <div class="card-list">
+        <th:block th:each="car : ${cars}" th:object="${car}">
+          <div class="card">
+            <div class="image-container">
+              <img th:src="@{*{image} ?: '/images/car-image.avif'}" />
+            </div>
+            <div class="card-body">
+              <div>
+                <strong>brand : </strong>
+                <span th:text="*{brand}">Opel</span>
+              </div>
+              <div>
+                <strong>model : </strong>
+                <span th:text="*{model}">Corsa</span>
+              </div>
+              <div>
+                <strong>Manufacture Year : </strong>
+                <span
+                  th:text="*{#temporals.format(manufactureYear, 'dd/MM/yyyy')}"
+                  >2020</span
+                >
+              </div>
+              <div>
+                <strong>prix per night : </strong>
+                <span
+                  th:text="*{#numbers.formatDecimal(pricePerNight, 0, 'COMMA', 3, 'POINT')}"
+                  >120.000
+                </span>
+                <span>DT</span>
+              </div>
+              <div>
+                <strong>State : </strong>
+                <span
+                  th:text="*{state.displayValue}"
+                  th:classappend="${car.state.displayValue == T(com.tekup.car_rental.model.CarState).AVAILABLE.displayValue} ? available : not-available"
+                >
+                  Available
+                </span>
+              </div>
+            </div>
+          </div>
+        </th:block>
+      </div>
+    </section>
+    <header th:replace="~{fragments/guest.html :: pageFooter}"></header>
+  </body>
+</html>

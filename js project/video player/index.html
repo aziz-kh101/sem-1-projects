@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>custom video player</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="input-container">
+      <div class="link-input">
+        <input id="video-link" type="text" disabled />
+        <button class="btn half-raduis">browse</button>
+      </div>
+      <button id="start" class="btn">play</button>
+    </div>
+    <section class="video-section">
+      <div class="video-player">
+        <video id="video"></video>
+        <div class="show-play">
+          <img src="icons/play.svg" alt="play" />
+        </div>
+        <div class="show-pause">
+          <img src="icons/pause.svg" alt="pause" />
+        </div>
+        <div class="controls">
+          <div class="progress-list">
+            <div class="progress-watched"></div>
+            <div class="progress-buffred"></div>
+          </div>
+          <div class="controls-buttons">
+            <div class="left-buttons">
+              <div class="play paused">
+                <img class="play" src="icons/play.svg" alt="play" />
+                <img class="paused" src="icons/pause.svg" alt="pause" />
+              </div>
+              <div class="time">00:00 / 00:00</div>
+              <div class="sound loud">
+                <img class="loud" src="icons/sound-loud.svg" />
+                <img class="low" src="icons/sound-low.svg" />
+                <img class="mute" src="icons/sound-off.svg" />
+                <div class="slider">
+                  <input value="100" type="range" />
+                </div>
+              </div>
+            </div>
+            <div class="right-buttons">
+              <div class="full-screen exited">
+                <img class="enter" src="icons/full-screen.svg" alt="play" />
+                <img
+                  class="exit"
+                  src="icons/exit-full-screen.svg"
+                  alt="pause"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="pop-up-container">
+      <dialog>
+        <span class="title">select one of the videos</span>
+        <ul>
+          <li data-name="1.mp4">Tom Odell - Another Love (Official Video)</li>
+          <li data-name="2.mp4">
+            Lukas Graham - 7 Years [Official Music Video]
+          </li>
+          <li data-name="3.mp4">Eminem - Mockingbird (Lyrics)</li>
+        </ul>
+        <div class="actions">
+          <button class="btn">select</button>
+        </div>
+      </dialog>
+    </div>
+  </body>
+</html>

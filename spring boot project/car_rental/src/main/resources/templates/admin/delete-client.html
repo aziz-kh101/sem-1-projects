@@ -1,0 +1,18 @@
+<html lang="en">
+  <head
+    th:replace="~{/fragments/guest.html :: pageHead('delete admin')}"
+  ></head>
+  <body>
+    <header th:replace="~{fragments/admin.html :: pageHeader}"></header>
+    <section class="delete-section">
+      <h1 th:text="@{|do you really want to delete client|}"></h1>
+      <form
+        th:action="@{| /administration/clients/${id}/delete|}"
+        method="post"
+      >
+        <input type="submit" class="button-rounded delete" value="delete" />
+      </form>
+      <a class="button-rounded" href="/administration/clients">go back</a>
+    </section>
+  </body>
+</html>

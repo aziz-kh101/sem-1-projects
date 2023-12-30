@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+  <head th:replace="~{fragments/guest.html :: pageHead('rent list')}"> </head>
+  <body>
+    <header th:replace="~{fragments/admin.html :: pageHeader}"></header>
+    <section class="list-admin-section">
+      <div>
+        <a class="button-rounded" href="/administration/rents/add">add rent</a>
+      </div>
+      <div class="card-list">
+        <th:block th:each="rent : ${rents}" th:object="${rent}">
+          <div class="card">
+            <div class="image-container">
+              <img th:src="@{*{car.image} ?: '/images/car-image.avif'}" />
+            </div>
+            <div class="card-body">
+              <div>
+                <strong>car : </strong>
+                <span th:text="*{car.brand}">Opel</span>
+                <span th:text="*{car.model}">Corsa</span>
+              </div>
+              <div>
+                <strong>client : </strong>
+                <span th:text="*{client.firstName}">Aziz</span>
+                <span th:text="*{client.lastName}">kh</span>
+              </div>
+              <div>
+                <strong>start date : </strong>
+                <span th:text="*{#temporals.format(startDate, 'dd/MM/yyyy')}"
+                  >27/12/2023</span
+                >
+              </div>
+
+              <div>
+                <strong>end date : </strong>
+                <span th:text="*{#temporals.format(endDate, 'dd/MM/yyyy')}"
+                  >28/12/2023</span
+                >
+              </div>
+              <div>
+                <strong>state : </strong>
+                <span
+                  th:text="*{state.displayValue}"
+                  th:classappend="${rent.state.displayValue == T(com.tekup.car_rental.model.RentState).ONGOING.displayValue} ? available : not-available"
+                >
+                  Available
+                </span>
+              </div>
+              <div>
+                <strong>added by : </strong>
+                <span
+                  th:text="${#authentication.principal.email} eq *{addedBy.email} ? 'You' : *{addedBy.email}"
+                >
+                  aziz@mail.com
+                </span>
+              </div>
+            </div>
+            <div
+              th:if="(${#authentication.principal.email} eq *{addedBy.email}) or ${#authorization.expression('hasRole(''SUPER_ADMIN'')')}"
+              class="actions"
+            >
+              <a
+                class="button-rounded"
+                th:href="@{|/administration/rents/*{id}/update|}"
+              >
+                update
+              </a>
+              <a
+                class="button-rounded delete"
+                th:href="@{|/administration/rents/*{id}/delete|}"
+              >
+                delete
+              </a>
+            </div>
+          </div>
+        </th:block>
+      </div>
+    </section>
+  </body>
+</html>

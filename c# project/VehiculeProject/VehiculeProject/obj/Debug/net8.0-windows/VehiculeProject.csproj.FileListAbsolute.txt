@@ -1,0 +1,8 @@
+C:\Users\aziz\source\repos\VehiculeProject\VehiculeProject\obj\Debug\net8.0-windows\VehiculeProject.csproj.AssemblyReference.cache
+C:\Users\aziz\source\repos\VehiculeProject\VehiculeProject\obj\Debug\net8.0-windows\VehiculeProject.Form1.resources
+C:\Users\aziz\source\repos\VehiculeProject\VehiculeProject\obj\Debug\net8.0-windows\VehiculeProject.Form2.resources
+C:\Users\aziz\source\repos\VehiculeProject\VehiculeProject\obj\Debug\net8.0-windows\VehiculeProject.csproj.GenerateResource.cache
+C:\Users\aziz\source\repos\VehiculeProject\VehiculeProject\obj\Debug\net8.0-windows\VehiculeProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aziz\source\repos\VehiculeProject\VehiculeProject\obj\Debug\net8.0-windows\VehiculeProject.AssemblyInfoInputs.cache
+C:\Users\aziz\source\repos\VehiculeProject\VehiculeProject\obj\Debug\net8.0-windows\VehiculeProject.AssemblyInfo.cs
+C:\Users\aziz\source\repos\VehiculeProject\VehiculeProject\obj\Debug\net8.0-windows\VehiculeProject.csproj.CoreCompileInputs.cache

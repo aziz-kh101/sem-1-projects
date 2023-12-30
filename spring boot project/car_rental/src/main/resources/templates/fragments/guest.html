@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+  <head th:fragment="pageHead(title)">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title th:text="${title}"></title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+  </head>
+  <body>
+    <header th:fragment="pageHeader">
+      <div class="title">Car Rental</div>
+      <div class="links">
+        <a href="/">home</a>
+        <a href="/administration">administration</a>
+        <a href="/list-cars">list of cars</a>
+      </div>
+    </header>
+
+    <footer th:fragment="pageFooter">
+      <strong>&copy; car rental 2023</strong>
+    </footer>
+  </body>
+</html>

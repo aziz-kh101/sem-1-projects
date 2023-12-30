@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header th:fragment="pageHeader">
+      <div class="title">Car Rental</div>
+      <div class="links">
+        <div sec:authorize="hasRole('SUPER_ADMIN')" class="links">
+          <a href="/administration/admins">admins</a>
+          <a href="/administration/cars">cars</a>
+        </div>
+        <div class="links">
+          <a href="/administration/rents">rents</a>
+          <a href="/administration/clients">clients</a>
+        </div>
+        <a class="button-rounded" href="/logout">log out</a>
+      </div>
+    </header>
+    <!-- admin form -->
+    <section th:fragment="adminForm" class="form-section">
+      <div>
+        <a class="button-rounded" href="/administration/admins">go back</a>
+      </div>
+      <div class="form-container">
+        <form
+          class="form"
+          th:object="${adminDto}"
+          th:action="${action}"
+          method="post"
+        >
+          <div>
+            <label for="fn">First Name </label>
+            <input
+              id="fn"
+              type="text"
+              th:value="*{firstName}"
+              th:field="*{firstName}"
+            />
+            <span
+              class="field-error"
+              th:if="${#fields.hasErrors('firstName')}"
+              th:errorclass="error"
+              th:errors="*{firstName}"
+            ></span>
+          </div>
+          <div>
+            <label for="ln">Last Name </label>
+            <input
+              id="ln"
+              type="text"
+              th:value="*{lastName}"
+              th:field="*{lastName}"
+            />
+            <span
+              class="field-error"
+              th:if="${#fields.hasErrors('lastName')}"
+              th:errorclass="error"
+              th:errors="*{lastName}"
+            ></span>
+          </div>
+          <div>
+            <label for="em">Email </label>
+            <input
+              id="em"
+              type="text"
+              th:value="*{email}"
+              th:field="*{email}"
+            />
+            <span
+              class="field-error"
+              th:if="${#fields.hasErrors('email')}"
+              th:errorclass="error"
+              th:errors="*{email}"
+            ></span>
+          </div>
+          <div>
+            <label for="pass" th:text=" ${passwordText} ?: 'Password'">
+              Password
+            </label>
+            <input
+              id="pass"
+              type="text"
+              th:value="*{password}"
+              th:field="*{password}"
+            />
+            <span
+              class="field-error"
+              th:if="${#fields.hasErrors('password')}"
+              th:errorclass="error"
+              th:errors="*{password}"
+            ></span>
+          </div>
+
+          <input
+            class="button-rounded"
+            th:value="${actionButton}"
+            type="submit"
+          />
+        </form>
+      </div>
+    </section>
+
+    <!-- car form -->
+
+    <section th:fragment="carForm" class="form-section">
+      <div>
+        <a class="button-rounded" href="/administration/cars">go back</a>
+      </div>
+      <div class="form-container">
+        <form
+          class="form"
+          th:object="${carDto}"
+          th:action="${action}"
+          method="post"
+          enctype="multipart/form-data"
+        >
+          <div>
+            <label for="br">Brand </label>
+            <input
+              id="br"
+              type="text"
+              th:value="*{brand}"
+              th:field="*{brand}"
+            />
+            <span
+              class="field-error"
+              th:if="${#fields.hasErrors('brand')}"
+              th:errorclass="error"
+              th:errors="*{brand}"
+            ></span>
+          </div>
+          <div>
+            <label for="mo">Model </label>
+            <input
+              id="mo"
+              type="text"
+              th:value="*{model}"
+              th:field="*{model}"
+            />
+            <span
+              class="field-error"
+              th:if="${#fields.hasErrors('model')}"
+              th:errorclass="error"
+              th:errors="*{model}"
+            ></span>
+          </div>
+          <div>
+            <label for="my">Manufacture Year </label>
+            <input
+              id="my"
+              type="date"
+              th:value="*{manufactureYear}"
+              th:field="*{manufactureYear}"
+            />
+            <span
+              class="field-error"
+              th:if="${#fields.hasErrors('manufactureYear')}"
+              th:errorclass="error"
+              th:errors="*{manufactureYear}"
+            ></span>
+          </div>
+          <div>
+            <label for="my">Price Per Night </label>
+            <input
+              id="my"
+              type="number"
+              step=".01"
+              th:value="*{pricePerNight}"
+              th:field="*{pricePerNight}"
+            />
+            <span
+              class="field-error"
+              th:if="${#fields.hasErrors('pricePerNight')}"
+              th:errorclass="error"
+              th:errors="*{pricePerNight}"
+            ></span>
+          </div>
+          <div>
+            <label for="st">State</label>
+            <select id="st" th:value="*{state}" th:field="*{state}">
+              <option
+                th:each=" optionState : ${T(com.tekup.car_rental.model.CarState).values()}"
+                th:value="${optionState}"
+                th:text="${optionState.displayValue}"
+              ></option>
+            </select>
+            <span
+              class="field-error"
+              th:if="${#fields.hasErrors('state')}"
+              th:errorclass="error"
+              th:errors="*{state}"
+            ></span>
+          </div>
+          <div>
+            <label for="pass" th:text=" ${imageText} ?: 'Image'"> Image </label>
+            <input
+              id="pass"
+              type="file"
+              th:value="*{image}"
+              th:field="*{image}"
+            />
+            <span
+              class="field-error"
+              th:if="${#fields.hasErrors('image')}"
+              th:errorclass="error"
+              th:errors="*{image}"
+            ></span>
+          </div>
+
+          <input
+            class="button-rounded"
+            th:value="${actionButton}"
+            type="submit"
+          />
+        </form>
+      </div>
+    </section>
+
+    <!-- client form -->
+    <section th:fragment="clientForm" class="form-section">
+      <div>
+        <a class="button-rounded" href="/administration/clients">go back</a>
+      </div>
+      <div class="form-container">
+        <form
+          class="form"
+          th:object="${clientDto}"
+          th:action="${action}"
+          method="post"
+        >
+          <div>
+            <label for="cn">Cin </label>
+            <input id="cn" type="text" th:value="*{cin}" th:field="*{cin}" />
+            <span
+              class="field-error"
+              th:if="${#fields.hasErrors('cin')}"
+              th:errorclass="error"
+              th:errors="*{cin}"
+            ></span>
+          </div>
+          <div>
+            <label for="fn">First Name </label>
+            <input
+              id="fn"
+              type="text"
+              th:value="*{firstName}"
+              th:field="*{firstName}"
+            />
+            <span
+              class="field-error"
+              th:if="${#fields.hasErrors('firstName')}"
+              th:errorclass="error"
+              th:errors="*{firstName}"
+            ></span>
+          </div>
+          <div>
+            <label for="ln">Last Name </label>
+            <input
+              id="ln"
+              type="text"
+              th:value="*{lastName}"
+              th:field="*{lastName}"
+            />
+            <span
+              class="field-error"
+              th:if="${#fields.hasErrors('lastName')}"
+              th:errorclass="error"
+              th:errors="*{lastName}"
+            ></span>
+          </div>
+
+          <input
+            class="button-rounded"
+            th:value="${actionButton}"
+            type="submit"
+          />
+        </form>
+      </div>
+    </section>
+
+    <!-- rent form -->
+    <section th:fragment="rentForm" class="form-section">
+      <div>
+        <a class="button-rounded" href="/administration/rents">go back</a>
+      </div>
+      <div class="form-container">
+        <form
+          class="form"
+          th:object="${rentDto}"
+          th:action="${action}"
+          method="post"
+          enctype="multipart/form-data"
+        >
+          <div>
+            <label for="cr">Car</label>
+            <select id="cr" th:value="*{carId}" th:field="*{carId}">
+              <option th:value="${null}">Select Car</option>
+              <option
+                th:each=" carOption :${session.listCars}"
+                th:value="${carOption.id}"
+                th:text="|${carOption.brand} ${carOption.model}|"
+              ></option>
+            </select>
+            <span
+              class="field-error"
+              th:if="${#fields.hasErrors('carId')}"
+              th:errorclass="error"
+              th:errors="*{carId}"
+            ></span>
+          </div>
+
+          <div>
+            <label for="cl">Client</label>
+            <select id="cl" th:value="*{clientId}" th:field="*{clientId}">
+              <option th:value="${null}">Select Client</option>
+              <option
+                th:each=" clientOption : ${session.listClients}"
+                th:value="${clientOption.id}"
+                th:text="|${clientOption.firstName} ${clientOption.lastName}|"
+              ></option>
+            </select>
+            <span
+              class="field-error"
+              th:if="${#fields.hasErrors('clientId')}"
+              th:errorclass="error"
+              th:errors="*{clientId}"
+            ></span>
+          </div>
+
+          <div>
+            <label for="sd">Start Date </label>
+            <input
+              id="sd"
+              type="date"
+              th:value="*{startDate}"
+              th:field="*{startDate}"
+            />
+            <span
+              class="field-error"
+              th:if="${#fields.hasErrors('startDate')}"
+              th:errorclass="error"
+              th:errors="*{startDate}"
+            ></span>
+          </div>
+          <div>
+            <label for="ed">End Date </label>
+            <input
+              id="ed"
+              type="date"
+              th:value="*{endDate}"
+              th:field="*{endDate}"
+            />
+            <span
+              class="field-error"
+              th:if="${#fields.hasErrors('endDate')}"
+              th:errorclass="error"
+              th:errors="*{endDate}"
+            ></span>
+          </div>
+          <div>
+            <label for="st">State</label>
+            <select id="st" th:value="*{state}" th:field="*{state}">
+              <option
+                th:each=" optionState : ${T(com.tekup.car_rental.model.RentState).values()}"
+                th:value="${optionState}"
+                th:text="${optionState.displayValue}"
+              ></option>
+            </select>
+            <span
+              class="field-error"
+              th:if="${#fields.hasErrors('state')}"
+              th:errorclass="error"
+              th:errors="*{state}"
+            ></span>
+          </div>
+
+          <input
+            class="button-rounded"
+            th:value="${actionButton}"
+            type="submit"
+          />
+        </form>
+      </div>
+    </section>
+  </body>
+</html>

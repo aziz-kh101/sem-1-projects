@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head
+    th:replace="~{/fragments/guest.html :: pageHead('update admin')}"
+  ></head>
+  <body>
+    <header th:replace="~{fragments/admin.html :: pageHeader}"></header>
+    <section
+      th:replace="~{fragments/admin.html :: adminForm(action=@{|/administration/admins/${id}/update|}, actionButton='update admin', passwordText='Password (Optional)')}"
+    ></section>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head th:replace="~{/fragments/guest.html :: pageHead('list admins')}"></head>
+  <body>
+    <header th:replace="~{fragments/admin.html :: pageHeader}"></header>
+    <section class="list-admin-section">
+      <div>
+        <a class="button-rounded" href="/administration/admins/add"
+          >add admin</a
+        >
+      </div>
+      <div class="card-list">
+        <th:block th:each="admin : ${admins}">
+          <div class="card" th:object="${admin}">
+            <div class="image-container">
+              <img th:src="@{/images/user-avatar.png}" />
+            </div>
+            <div class="card-body">
+              <div>
+                <strong>first name : </strong>
+                <span th:text="*{firstName}"></span>
+              </div>
+              <div>
+                <strong>last name : </strong>
+                <span th:text="*{lastName}"></span>
+              </div>
+              <div>
+                <strong>email : </strong>
+                <span th:text="*{email}"></span>
+              </div>
+            </div>
+            <div class="actions">
+              <a
+                class="button-rounded"
+                th:href="@{|/administration/admins/*{id}/update|}"
+              >
+                update
+              </a>
+              <a
+                class="button-rounded delete"
+                th:href="@{|/administration/admins/*{id}/delete|}"
+              >
+                delete
+              </a>
+            </div>
+          </div>
+        </th:block>
+      </div>
+    </section>
+  </body>
+</html>
