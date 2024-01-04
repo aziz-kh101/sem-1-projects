@@ -34,4 +34,4 @@ build/
 
 
 **/uploads/**
-!**/uploads/
+!**/uploads/.gitkeep
