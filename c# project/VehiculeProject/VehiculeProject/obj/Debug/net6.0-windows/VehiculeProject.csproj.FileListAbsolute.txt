@@ -44,3 +44,4 @@ C:\Users\aziz\Downloads\tekup\sem 1 projects\c# project\VehiculeProject\Vehicule
 C:\Users\aziz\Downloads\tekup\sem 1 projects\c# project\VehiculeProject\VehiculeProject\obj\Debug\net6.0-windows\ref\VehiculeProject.dll
 C:\Users\aziz\Downloads\tekup\sem 1 projects\c# project\VehiculeProject\VehiculeProject\bin\Debug\net6.0-windows\msvcr100.dll
 C:\Users\aziz\Downloads\tekup\sem 1 projects\c# project\VehiculeProject\VehiculeProject\bin\Debug\net6.0-windows\SQLite.Interop.dll
+C:\Users\aziz\Downloads\tekup\sem 1 projects\c# project\VehiculeProject\VehiculeProject\obj\Debug\net6.0-windows\VehiculeProject.sourcelink.json

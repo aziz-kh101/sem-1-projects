@@ -7,6 +7,7 @@
 html,
 body {
   scroll-behavior: smooth;
+  font-family: "Nunito", sans-serif;
 }
 
 .fw-medium {
@@ -29,6 +30,30 @@ body {
   font-family: "Nunito", sans-serif;
   font-weight: 600;
   transition: 0.5s;
+}
+
+.footer :is(a.btn.btn-link, .footer-menu > a) {
+  text-decoration: none;
+}
+
+.text-primary {
+  color: var(--primary) !important;
+}
+
+h5 {
+  color: black;
+}
+
+.btn.btn-light {
+  background-color: var(--light);
+  border-color: var(--light);
+  border-radius: 0;
+}
+
+.btn.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  border-radius: 0;
 }
 
 .btn.btn-primary,
